@@ -219,7 +219,7 @@ function w3_close() {
 
     var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     if (isMobile) {
-      title.innerHTML = '<a href="http://maps.apple.com/?ll='+cards.lat[i]+','+cards.lon[i]+'"><b>' + cards.title[i] + '</b></a>';
+      title.innerHTML = '<a href="https://www.google.com/maps/search/?api=1&query='+cards.lat[i]+','+cards.lon[i]+'"><b>' + cards.title[i] + '</b></a>';
     } else {
       title.innerHTML = '<a href="https://www.google.com/maps?q='+cards.lat[i]+','+cards.lon[i]+'"><b>' + cards.title[i] + '</b></a>';
     }
