@@ -195,7 +195,6 @@ function w3_close() {
       desc: ['Lantai 2',  'Lantai 1',  'Lantai 2',  'Lantai 3',  'nan',  'Lantai 2 Ruang Kuliah MIH 01, MIH 02, MIH 03',  'Lantai 1',  'Lantai 1',  'Lantai 2',  'Lantai 1',  'Lantai 3',  'lantai 1'],
       lat: [-5.13206994123463, -5.13216298929737, -5.13213298282131, -5.13211973015849, -5.1321679888573, -5.13213087410049, -5.13210176625704, -5.13211298187648, -5.13222031029837, -5.13214028949416, -5.13214028949416, -5.1321048519659],
       lon: [119.491265453501, 119.491070856333, 119.49119849993, 119.491281072258, 119.491167303618, 119.491292878397, 119.491405966407, 119.491516074051, 119.491167494806, 119.491298299533, 119.491298299533, 119.491359910553],
-      links:[]
     };
   
   var cardContainer = document.getElementById("card-container");
@@ -217,7 +216,8 @@ function w3_close() {
     cardContentDiv.style.height = "160px";
 
     var title = document.createElement("p");
-    title.innerHTML = '<a href="#"><b>'+cards.title[i]+'</b></a>';
+
+    title.innerHTML = '<a href="https://www.google.com/maps?q='+cards.lat[i]+','+cards.lon[i]+'"><b>' + cards.title[i] + '</b></a>';
 
     var description = document.createElement("p");
     description.innerHTML = 'Description: '+cards.desc[i]+'</br>Latitude: '+cards.lat[i] + '</br>Longitude: '+cards.lon[i]
