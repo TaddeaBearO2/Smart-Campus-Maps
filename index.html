@@ -189,6 +189,14 @@ function w3_close() {
     document.getElementById("myOverlay").style.display = "none";
 }
   
+  var cards =
+    {
+      title: ['Dekanat Fakultas Hukum',  'Justice Cafe',  'Pusat Kajian Kejaksaan',  'Ruang Dharma Wanita',  'RUANG H.M. Prasetyo',  'Ruang Kuliah MIH',  'Ruang Prodi Magister Kenotariatan',  'Ruang Prodi Magister/Doktor',  'Ruang Senat',  'Ruang Tata Usaha',  'Ruangan Promosi',  'Toilet'],
+      desc: ['Lantai 2',  'Lantai 1',  'Lantai 2',  'Lantai 3',  'nan',  'Lantai 2 Ruang Kuliah MIH 01, MIH 02, MIH 03',  'Lantai 1',  'Lantai 1',  'Lantai 2',  'Lantai 1',  'Lantai 3',  'lantai 1'],
+      lat: [-5.13206994123463, -5.13216298929737, -5.13213298282131, -5.13211973015849, -5.1321679888573, -5.13213087410049, -5.13210176625704, -5.13211298187648, -5.13222031029837, -5.13214028949416, -5.13214028949416, -5.1321048519659],
+      lon: [119.491265453501, 119.491070856333, 119.49119849993, 119.491281072258, 119.491167303618, 119.491292878397, 119.491405966407, 119.491516074051, 119.491167494806, 119.491298299533, 119.491298299533, 119.491359910553],
+      links:[]
+    };
   
   var cardContainer = document.getElementById("card-container");
 
@@ -198,7 +206,7 @@ function w3_close() {
 
     var img = document.createElement("img");
     img.src = "assets/gambar" + i + ".jpeg";
-    img.alt = "Gambar " + i;
+    img.alt = cards.title[i];
     img.style.width = "100%";
     img.className = "w3-hover-opacity";
 
@@ -206,12 +214,13 @@ function w3_close() {
 
     var cardContentDiv = document.createElement("div");
     cardContentDiv.className = "w3-container w3-white";
+    cardContentDiv.style.height = "180px";
 
     var title = document.createElement("p");
-    title.innerHTML = "<b>Gambar " + i + "</b>";
+    title.innerHTML = '<a href="#"><b>'+cards.title[i]+'</b></a>';
 
     var description = document.createElement("p");
-    description.innerHTML = "Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.";
+    description.innerHTML = 'Description: '+cards.desc[i]+'</br>Latitude: '+cards.lat[i] + '</br>Longitude: '+cards.lon[i]
 
     cardContentDiv.appendChild(title);
     cardContentDiv.appendChild(description);
