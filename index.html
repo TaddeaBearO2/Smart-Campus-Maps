@@ -217,7 +217,12 @@ function w3_close() {
 
     var title = document.createElement("p");
 
-    title.innerHTML = '<a href="https://www.google.com/maps?q='+cards.lat[i]+','+cards.lon[i]+'"><b>' + cards.title[i] + '</b></a>';
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (isMobile) {
+      title.innerHTML = '<a href="http://maps.apple.com/?ll='+cards.lat[i]+','+cards.lon[i]+'"><b>' + cards.title[i] + '</b></a>';
+    } else {
+      title.innerHTML = '<a href="https://www.google.com/maps?q='+cards.lat[i]+','+cards.lon[i]+'"><b>' + cards.title[i] + '</b></a>';
+    }
 
     var description = document.createElement("p");
     description.innerHTML = 'Description: '+cards.desc[i]+'</br>Latitude: '+cards.lat[i] + '</br>Longitude: '+cards.lon[i]
