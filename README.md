@@ -1,1 +1,1 @@
-[Smart Campus Maps](https://muhammadamirulhaq.github.io/Smart-Campus-Maps/)
+[Smart Campus Maps](https://taddeabearo2.github.io/Smart-Campus-Maps/)
